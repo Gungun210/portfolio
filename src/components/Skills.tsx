@@ -30,19 +30,20 @@ export function Skills() {
         {groups.map((g) => (
           <div
             key={g.title}
-            className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all"
+            className="group relative rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 overflow-hidden"
           >
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="flex items-center gap-3">
-              <span className="h-9 w-9 rounded-lg bg-primary/10 text-primary grid place-items-center">
+              <span className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary grid place-items-center ring-1 ring-primary/10 group-hover:from-primary group-hover:to-primary group-hover:text-primary-foreground group-hover:ring-primary/30 transition-all">
                 <g.icon className="h-4.5 w-4.5" />
               </span>
-              <h3 className="font-semibold text-foreground">{g.title}</h3>
+              <h3 className="font-semibold text-foreground tracking-tight">{g.title}</h3>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
               {g.items.map((item) => (
                 <span
                   key={item}
-                  className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-foreground hover:border-primary/40 hover:text-primary transition-colors"
+                  className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-surface border border-border text-foreground hover:border-primary/40 hover:text-primary hover:bg-primary/5 transition-colors"
                 >
                   {item}
                 </span>

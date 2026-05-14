@@ -26,16 +26,17 @@ export function Achievements() {
         {items.map((it, i) => (
           <div
             key={it.title}
-            className="relative rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-all"
+            className="group relative rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 overflow-hidden"
           >
-            <span className="absolute top-6 right-6 text-xs font-mono text-muted-foreground">
+            <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl" />
+            <span className="absolute top-6 right-6 text-[11px] font-mono text-muted-foreground/70">
               0{i + 1}
             </span>
-            <span className="h-12 w-12 rounded-xl bg-[var(--gradient-hero)] grid place-items-center text-white shadow-[var(--shadow-soft)]">
+            <span className="relative h-12 w-12 rounded-xl bg-[var(--gradient-hero)] grid place-items-center text-white shadow-[var(--shadow-soft)] ring-1 ring-white/10">
               <it.icon className="h-5 w-5" />
             </span>
-            <h3 className="mt-5 text-lg font-semibold text-foreground">{it.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+            <h3 className="relative mt-5 text-lg font-semibold text-foreground tracking-tight">{it.title}</h3>
+            <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
           </div>
         ))}
       </div>

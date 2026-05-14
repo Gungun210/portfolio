@@ -24,6 +24,7 @@ export function Contact() {
       eyebrow="Contact"
       title="Let's build something with data."
       description="Open to data analytics internships, collaborations, and conversations about analytics."
+      className="bg-mesh relative"
     >
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-3">
