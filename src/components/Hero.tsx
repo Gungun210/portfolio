@@ -1,5 +1,5 @@
 import profile from "@/assets/profile.jpg";
-import { ArrowUpRight, Download, Github, Linkedin, Mail, FileText, TrendingUp, BarChart3, Sparkles } from "lucide-react";
+import { Download, Github, Linkedin, Mail, FileText, TrendingUp, BarChart3, Sparkles } from "lucide-react";
 
 export function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
