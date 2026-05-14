@@ -152,17 +152,6 @@ export function Hero() {
   );
 }
 
-function KpiMini({ label, value, sub, icon }: { label: string; value: string; sub: string; icon: React.ReactNode }) {
-  return (
-    <div className="rounded-xl bg-white/5 border border-white/10 p-3">
-      <div className="flex items-center gap-1.5 text-white/50 text-[10px] uppercase tracking-widest">
-        {icon} {label}
-      </div>
-      <p className="mt-1.5 text-base font-semibold">{value}</p>
-      <p className="text-[11px] text-white/50">{sub}</p>
-    </div>
-  );
-}
 
 function MiniChart() {
   const points = [12, 18, 14, 22, 20, 28, 26, 34, 30, 40, 38, 48];
