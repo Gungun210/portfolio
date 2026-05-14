@@ -82,7 +82,7 @@ function ProjectCard({
   href: string;
 }) {
   return (
-    <article className="group rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-all flex flex-col">
+    <article className="group relative rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 flex flex-col overflow-hidden">
       <div className="flex items-start justify-between">
         <span className="h-11 w-11 rounded-xl bg-primary/10 text-primary grid place-items-center">
           <Icon className="h-5 w-5" />
