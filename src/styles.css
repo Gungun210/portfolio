@@ -116,4 +116,22 @@
     background-clip: text;
     color: transparent;
   }
+  .bg-mesh { background-image: var(--gradient-mesh); }
+  .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+  .animate-fade-up { animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .ring-grid {
+    background-image:
+      linear-gradient(to right, oklch(0.929 0.013 255.508 / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.929 0.013 255.508 / 0.5) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  }
+  .divider-fade {
+    height: 1px;
+    background: linear-gradient(to right, transparent, oklch(0.929 0.013 255.508), transparent);
+  }
 }
