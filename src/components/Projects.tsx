@@ -11,7 +11,7 @@ export function Projects() {
     >
       <div className="space-y-6">
         {/* Featured project - Dashboard preview */}
-        <article className="group grid lg:grid-cols-5 gap-0 rounded-3xl overflow-hidden border border-border bg-card shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all">
+        <article className="group grid lg:grid-cols-5 gap-0 rounded-3xl overflow-hidden border border-border bg-card shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 transition-all duration-300">
           <div className="lg:col-span-2 p-8 lg:p-10 flex flex-col">
             <div className="flex items-center gap-2 text-xs font-medium text-primary mb-4">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Featured · Analytics
