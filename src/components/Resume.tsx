@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Download, ExternalLink, ShieldCheck, Sparkles } from "lucide-react";
+import { Download, ExternalLink, ShieldCheck, Sparkles, FileText, CheckCircle2 } from "lucide-react";
 
 export function Resume() {
   return (
@@ -19,12 +19,42 @@ export function Resume() {
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-medium">
               <Sparkles className="h-3.5 w-3.5" /> Updated 2026
             </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-foreground border border-border text-xs font-medium">
+              <FileText className="h-3.5 w-3.5" /> 1 Page · PDF
+            </span>
           </div>
           <p className="text-muted-foreground leading-relaxed">
             One-page resume tailored for data analytics internships. Skills, projects, research, and
             achievements at a glance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+
+          {/* Highlights */}
+          <ul className="space-y-2.5">
+            {[
+              "Optimized for applicant tracking systems",
+              "Quantified outcomes & metrics",
+              "Tailored for data analytics roles",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-2 text-sm text-foreground/80">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                {t}
+              </li>
+            ))}
+          </ul>
+
+          <div className="grid grid-cols-2 gap-3 pt-2">
+            {[
+              { l: "Last Updated", v: "2026" },
+              { l: "Format", v: "PDF · A4" },
+            ].map((s) => (
+              <div key={s.l} className="rounded-xl border border-border bg-card px-4 py-3">
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{s.l}</p>
+                <p className="mt-1 text-sm font-semibold text-foreground">{s.v}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
             <a
               href="/resume.pdf"
               download
@@ -45,8 +75,17 @@ export function Resume() {
         <div className="lg:col-span-2">
           <div className="rounded-2xl overflow-hidden border border-border bg-card shadow-[var(--shadow-elegant)]">
             <div className="flex items-center justify-between px-4 py-2.5 border-b border-border bg-surface text-xs text-muted-foreground">
-              <span>resume.pdf · Gungun Khatri</span>
-              <span>PDF Preview</span>
+              <span className="inline-flex items-center gap-2">
+                <span className="flex gap-1">
+                  <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
+                </span>
+                resume.pdf · Gungun Khatri
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" /> ATS Verified
+              </span>
             </div>
             <object
               data="/resume.pdf#toolbar=0&navpanes=0"
