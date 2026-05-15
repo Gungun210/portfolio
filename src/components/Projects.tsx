@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Github, ArrowUpRight, TrendingUp, Users, ShoppingBag, Calendar, Linkedin } from "lucide-react";
+import { Github, ArrowUpRight, TrendingUp, Users, ShoppingBag, Calendar, Linkedin, CheckCircle2 } from "lucide-react";
 
 export function Projects() {
   return (
