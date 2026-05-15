@@ -54,6 +54,7 @@ export function Projects() {
             desc="Productivity analytics tool using Python and Pandas to identify efficiency bottlenecks, analyze routines, and generate optimized scheduling recommendations."
             tech={["Python", "Pandas", "Streamlit"]}
             href="https://github.com/Gungun210"
+            preview={<RoutinePreview />}
           />
           <ProjectCard
             icon={Linkedin}
@@ -61,6 +62,7 @@ export function Projects() {
             desc="Chrome Extension that analyzes LinkedIn profiles using AI APIs and suggests improvements for headlines, summaries, and profile optimization."
             tech={["Python", "AI APIs", "JavaScript"]}
             href="https://github.com/Gungun210"
+            preview={<LinkedInPreview />}
           />
         </div>
       </div>
