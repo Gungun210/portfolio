@@ -1,5 +1,5 @@
 import profile from "@/assets/profile.jpg";
-import { Download, Github, Linkedin, Mail, FileText, TrendingUp } from "lucide-react";
+import { Download, Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -90,26 +90,6 @@ export function Hero() {
               />
             </div>
 
-            {/* KPI card - bottom right (subtle) */}
-            <div className="hidden sm:flex absolute -bottom-3 -right-2 items-center gap-2.5 bg-white/90 backdrop-blur rounded-2xl py-2.5 px-3.5 shadow-[var(--shadow-elegant)] border border-border animate-float-slow">
-              <span className="h-9 w-9 rounded-xl bg-emerald-50 grid place-items-center text-emerald-600">
-                <TrendingUp className="h-4 w-4" />
-              </span>
-              <div>
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground">CGPA</p>
-                <p className="text-sm font-semibold text-foreground">9.0 / 10</p>
-              </div>
-            </div>
-
-            {/* KPI card - top left (dark glass, single chart) */}
-            <div className="hidden sm:block absolute -top-2 -left-6 glass-dark text-white rounded-2xl p-3 w-40 shadow-[var(--shadow-elegant)] animate-float-slow" style={{ animationDelay: "1.2s" }}>
-              <div className="flex items-center justify-between mb-1.5">
-                <p className="text-[10px] uppercase tracking-widest text-white/50">Insights</p>
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-400/20">↑</span>
-              </div>
-              <p className="text-base font-semibold leading-none">+128%</p>
-              <div className="mt-1.5"><MiniChart /></div>
-            </div>
           </div>
         </div>
       </div>
