@@ -1,5 +1,5 @@
 import { Section } from "./Section";
-import { Github, ArrowUpRight, TrendingUp, Users, ShoppingBag, Calendar, Linkedin } from "lucide-react";
+import { Github, ArrowUpRight, TrendingUp, Users, ShoppingBag, Calendar, Linkedin, CheckCircle2 } from "lucide-react";
 
 export function Projects() {
   return (
@@ -54,6 +54,7 @@ export function Projects() {
             desc="Productivity analytics tool using Python and Pandas to identify efficiency bottlenecks, analyze routines, and generate optimized scheduling recommendations."
             tech={["Python", "Pandas", "Streamlit"]}
             href="https://github.com/Gungun210"
+            preview={<RoutinePreview />}
           />
           <ProjectCard
             icon={Linkedin}
@@ -61,6 +62,7 @@ export function Projects() {
             desc="Chrome Extension that analyzes LinkedIn profiles using AI APIs and suggests improvements for headlines, summaries, and profile optimization."
             tech={["Python", "AI APIs", "JavaScript"]}
             href="https://github.com/Gungun210"
+            preview={<LinkedInPreview />}
           />
         </div>
       </div>
@@ -74,38 +76,140 @@ function ProjectCard({
   desc,
   tech,
   href,
+  preview,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   desc: string;
   tech: string[];
   href: string;
+  preview?: React.ReactNode;
 }) {
   return (
-    <article className="group relative rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 flex flex-col overflow-hidden">
-      <div className="flex items-start justify-between">
-        <span className="h-11 w-11 rounded-xl bg-primary/10 text-primary grid place-items-center">
-          <Icon className="h-5 w-5" />
-        </span>
-        <a
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          className="h-9 w-9 rounded-full border border-border grid place-items-center text-muted-foreground hover:text-primary hover:border-primary/40 transition"
-        >
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
-      </div>
-      <h3 className="mt-5 text-xl font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
-      <div className="mt-5 flex flex-wrap gap-2">
-        {tech.map((t) => (
-          <span key={t} className="text-xs font-medium px-2.5 py-1 rounded-md bg-surface border border-border">
-            {t}
+    <article className="group relative rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 flex flex-col overflow-hidden">
+      {preview && (
+        <div className="relative h-36 border-b border-border bg-gradient-to-br from-surface to-white overflow-hidden">
+          {preview}
+        </div>
+      )}
+      <div className="p-7 flex flex-col flex-1">
+        <div className="flex items-start justify-between">
+          <span className="h-11 w-11 rounded-xl bg-primary/10 text-primary grid place-items-center">
+            <Icon className="h-5 w-5" />
           </span>
-        ))}
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open repository"
+            className="h-9 w-9 rounded-full border border-border grid place-items-center text-muted-foreground hover:text-primary hover:border-primary/40 transition"
+          >
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+        <h3 className="mt-5 text-xl font-semibold text-foreground">{title}</h3>
+        <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {tech.map((t) => (
+            <span key={t} className="text-xs font-medium px-2.5 py-1 rounded-md bg-surface border border-border">
+              {t}
+            </span>
+          ))}
+        </div>
+        <div className="mt-6 pt-5 border-t border-border flex items-center justify-between">
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition"
+          >
+            <Github className="h-4 w-4" /> View on GitHub
+          </a>
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-primary transition"
+          >
+            Source <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
       </div>
     </article>
+  );
+}
+
+function RoutinePreview() {
+  const blocks = [
+    { l: "Deep Work", v: 82, c: "from-[oklch(0.55_0.22_264)] to-[oklch(0.7_0.18_250)]" },
+    { l: "Meetings", v: 48, c: "from-[oklch(0.65_0.18_220)] to-[oklch(0.78_0.16_220)]" },
+    { l: "Breaks", v: 30, c: "from-[oklch(0.7_0.15_280)] to-[oklch(0.78_0.12_280)]" },
+    { l: "Admin", v: 22, c: "from-slate-400 to-slate-300" },
+  ];
+  return (
+    <div className="absolute inset-0 p-5 flex flex-col justify-between">
+      <div className="flex items-center justify-between">
+        <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Weekly Routine</p>
+        <span className="text-[10px] font-medium text-emerald-600 inline-flex items-center gap-1">
+          <CheckCircle2 className="h-3 w-3" /> +24% efficiency
+        </span>
+      </div>
+      <div className="space-y-2">
+        {blocks.map((b) => (
+          <div key={b.l}>
+            <div className="flex justify-between text-[10px] mb-1">
+              <span className="text-foreground/70">{b.l}</span>
+              <span className="text-muted-foreground">{b.v}h</span>
+            </div>
+            <div className="h-1.5 rounded-full bg-border/60 overflow-hidden">
+              <div className={`h-full rounded-full bg-gradient-to-r ${b.c}`} style={{ width: `${b.v}%` }} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function LinkedInPreview() {
+  const scores = [
+    { l: "Headline", v: 92 },
+    { l: "About", v: 78 },
+    { l: "Experience", v: 85 },
+  ];
+  return (
+    <div className="absolute inset-0 p-5 flex gap-4 items-center">
+      <div className="relative h-20 w-20 shrink-0">
+        <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
+          <circle cx="40" cy="40" r="32" stroke="oklch(0.929 0.013 255.508)" strokeWidth="6" fill="none" />
+          <circle
+            cx="40" cy="40" r="32"
+            stroke="oklch(0.55 0.22 264)" strokeWidth="6" fill="none"
+            strokeDasharray={`${2 * Math.PI * 32}`} strokeDashoffset={`${2 * Math.PI * 32 * (1 - 0.85)}`}
+            strokeLinecap="round"
+          />
+        </svg>
+        <div className="absolute inset-0 grid place-items-center">
+          <div className="text-center">
+            <p className="text-base font-bold text-foreground leading-none">85</p>
+            <p className="text-[8px] text-muted-foreground uppercase tracking-wider">Score</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex-1 space-y-2">
+        {scores.map((s) => (
+          <div key={s.l}>
+            <div className="flex justify-between text-[10px] mb-1">
+              <span className="text-foreground/70">{s.l}</span>
+              <span className="text-muted-foreground">{s.v}%</span>
+            </div>
+            <div className="h-1 rounded-full bg-border/60 overflow-hidden">
+              <div className="h-full rounded-full bg-gradient-to-r from-[oklch(0.55_0.22_264)] to-[oklch(0.7_0.18_250)]" style={{ width: `${s.v}%` }} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
