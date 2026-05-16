@@ -41,7 +41,7 @@ function Index() {
         <Projects />
         <Research />
         <Achievements />
-        <Resume />
+        <Certifications />
         <Contact />
       </main>
       <Footer />
