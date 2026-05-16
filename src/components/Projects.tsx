@@ -53,7 +53,7 @@ export function Projects() {
             title="Routine Optimizer"
             desc="Productivity analytics tool using Python and Pandas to identify efficiency bottlenecks, analyze routines, and generate optimized scheduling recommendations."
             tech={["Python", "Pandas", "Streamlit"]}
-            href="https://github.com/Gungun210"
+            href="https://github.com/Gungun210/Routine_optimizer"
             preview={<RoutinePreview />}
           />
           <ProjectCard
@@ -61,7 +61,7 @@ export function Projects() {
             title="LinkedIn AI Analyzer"
             desc="Chrome Extension that analyzes LinkedIn profiles using AI APIs and suggests improvements for headlines, summaries, and profile optimization."
             tech={["Python", "AI APIs", "JavaScript"]}
-            href="https://github.com/Gungun210"
+            href="https://github.com/Gungun210/AI_analyzer_chrome_extension"
             preview={<LinkedInPreview />}
           />
         </div>
