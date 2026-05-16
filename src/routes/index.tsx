@@ -6,7 +6,7 @@ import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Research } from "@/components/Research";
 import { Achievements } from "@/components/Achievements";
-import { Resume } from "@/components/Resume";
+import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
