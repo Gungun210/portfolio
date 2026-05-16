@@ -14,10 +14,11 @@ export function About() {
       <div className="grid lg:grid-cols-5 gap-10">
         <div className="lg:col-span-2">
           <p className="text-base text-muted-foreground leading-relaxed">
-            B.Tech in Data Science student at <span className="text-foreground font-medium">JIET, Jodhpur</span>{" "}
-            with a CGPA of <span className="text-foreground font-medium">9.0</span>. Passionate about analytics,
-            dashboard development, data storytelling, and solving business problems using Python, SQL,
-            and visualization tools.
+            B.Tech in Data Science student at{" "}
+            <span className="text-foreground font-medium">JIET, Jodhpur</span> with a CGPA of{" "}
+            <span className="text-foreground font-medium">9.0</span>. Passionate about analytics,
+            dashboard development, data storytelling, and solving business problems using Python,
+            SQL, and visualization tools.
           </p>
           <div className="mt-8 grid grid-cols-3 gap-4">
             <Stat value="9.0" label="CGPA" />

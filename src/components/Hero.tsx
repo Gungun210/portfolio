@@ -2,7 +2,8 @@ import profile from "@/assets/profile.jpg";
 import { Download, Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export function Hero() {
-  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-mesh">
@@ -32,9 +33,9 @@ export function Hero() {
           </div>
 
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Data Science student with hands-on experience in Python, SQL, Power BI, Tableau, and EDA.
-            I transform raw datasets into actionable business insights through dashboards, KPI reporting,
-            and data storytelling.
+            Data Science student with hands-on experience in Python, SQL, Power BI, Tableau, and
+            EDA. I transform raw datasets into actionable business insights through dashboards, KPI
+            reporting, and data storytelling.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -62,14 +63,28 @@ export function Hero() {
           </div>
 
           <div className="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
-            <a href="https://github.com/Gungun210" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground transition">
+            <a
+              href="https://github.com/Gungun210"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-foreground transition"
+            >
               <Github className="h-3.5 w-3.5" /> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/gungun-khatri/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground transition">
+            <a
+              href="https://www.linkedin.com/in/gungun-khatri/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-foreground transition"
+            >
               <Linkedin className="h-3.5 w-3.5" /> LinkedIn
             </a>
-            <span className="flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-foreground/40" /> JIET, Jodhpur</span>
-            <span className="flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-foreground/40" /> CGPA 9.0</span>
+            <span className="flex items-center gap-2">
+              <span className="h-1 w-1 rounded-full bg-foreground/40" /> JIET, Jodhpur
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="h-1 w-1 rounded-full bg-foreground/40" /> CGPA 9.0
+            </span>
           </div>
         </div>
 
@@ -91,14 +106,12 @@ export function Hero() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-
           </div>
         </div>
       </div>
     </section>
   );
 }
-
 
 function MiniChart() {
   const points = [12, 18, 14, 22, 20, 28, 26, 34, 30, 40, 38, 48];
@@ -119,7 +132,13 @@ function MiniChart() {
         </linearGradient>
       </defs>
       <path d={area} fill="url(#g)" />
-      <path d={path} fill="none" stroke="oklch(0.78 0.16 240)" strokeWidth="1.6" strokeLinecap="round" />
+      <path
+        d={path}
+        fill="none"
+        stroke="oklch(0.78 0.16 240)"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

@@ -1,5 +1,14 @@
 import { Section } from "./Section";
-import { Github, ArrowUpRight, TrendingUp, Users, ShoppingBag, Calendar, Linkedin, CheckCircle2 } from "lucide-react";
+import {
+  Github,
+  ArrowUpRight,
+  TrendingUp,
+  Users,
+  ShoppingBag,
+  Calendar,
+  Linkedin,
+  CheckCircle2,
+} from "lucide-react";
 
 export function Projects() {
   return (
@@ -20,12 +29,16 @@ export function Projects() {
               E-Commerce Sales Analytics Dashboard
             </h3>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Analyzed 50K+ transaction records using SQL joins, KPI calculations, and Tableau dashboards
-              to identify sales trends, customer behavior, category performance, and business insights.
+              Analyzed 50K+ transaction records using SQL joins, KPI calculations, and Tableau
+              dashboards to identify sales trends, customer behavior, category performance, and
+              business insights.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {["SQL", "Tableau", "Excel", "Pandas"].map((t) => (
-                <span key={t} className="text-xs font-medium px-2.5 py-1 rounded-md bg-surface border border-border text-foreground">
+                <span
+                  key={t}
+                  className="text-xs font-medium px-2.5 py-1 rounded-md bg-surface border border-border text-foreground"
+                >
                   {t}
                 </span>
               ))}
@@ -111,7 +124,10 @@ function ProjectCard({
         <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
         <div className="mt-5 flex flex-wrap gap-2">
           {tech.map((t) => (
-            <span key={t} className="text-xs font-medium px-2.5 py-1 rounded-md bg-surface border border-border">
+            <span
+              key={t}
+              className="text-xs font-medium px-2.5 py-1 rounded-md bg-surface border border-border"
+            >
               {t}
             </span>
           ))}
@@ -149,7 +165,9 @@ function RoutinePreview() {
   return (
     <div className="absolute inset-0 p-5 flex flex-col justify-between">
       <div className="flex items-center justify-between">
-        <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Weekly Routine</p>
+        <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
+          Weekly Routine
+        </p>
         <span className="text-[10px] font-medium text-emerald-600 inline-flex items-center gap-1">
           <CheckCircle2 className="h-3 w-3" /> +24% efficiency
         </span>
@@ -162,7 +180,10 @@ function RoutinePreview() {
               <span className="text-muted-foreground">{b.v}h</span>
             </div>
             <div className="h-1.5 rounded-full bg-border/60 overflow-hidden">
-              <div className={`h-full rounded-full bg-gradient-to-r ${b.c}`} style={{ width: `${b.v}%` }} />
+              <div
+                className={`h-full rounded-full bg-gradient-to-r ${b.c}`}
+                style={{ width: `${b.v}%` }}
+              />
             </div>
           </div>
         ))}
@@ -181,11 +202,23 @@ function LinkedInPreview() {
     <div className="absolute inset-0 p-5 flex gap-4 items-center">
       <div className="relative h-20 w-20 shrink-0">
         <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
-          <circle cx="40" cy="40" r="32" stroke="oklch(0.929 0.013 255.508)" strokeWidth="6" fill="none" />
           <circle
-            cx="40" cy="40" r="32"
-            stroke="oklch(0.55 0.22 264)" strokeWidth="6" fill="none"
-            strokeDasharray={`${2 * Math.PI * 32}`} strokeDashoffset={`${2 * Math.PI * 32 * (1 - 0.85)}`}
+            cx="40"
+            cy="40"
+            r="32"
+            stroke="oklch(0.929 0.013 255.508)"
+            strokeWidth="6"
+            fill="none"
+          />
+          <circle
+            cx="40"
+            cy="40"
+            r="32"
+            stroke="oklch(0.55 0.22 264)"
+            strokeWidth="6"
+            fill="none"
+            strokeDasharray={`${2 * Math.PI * 32}`}
+            strokeDashoffset={`${2 * Math.PI * 32 * (1 - 0.85)}`}
             strokeLinecap="round"
           />
         </svg>
@@ -204,7 +237,10 @@ function LinkedInPreview() {
               <span className="text-muted-foreground">{s.v}%</span>
             </div>
             <div className="h-1 rounded-full bg-border/60 overflow-hidden">
-              <div className="h-full rounded-full bg-gradient-to-r from-[oklch(0.55_0.22_264)] to-[oklch(0.7_0.18_250)]" style={{ width: `${s.v}%` }} />
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[oklch(0.55_0.22_264)] to-[oklch(0.7_0.18_250)]"
+                style={{ width: `${s.v}%` }}
+              />
             </div>
           </div>
         ))}
@@ -236,9 +272,24 @@ function DashboardPreview() {
       </div>
 
       <div className="grid grid-cols-3 gap-3">
-        <MetricMini label="Orders" value="50,284" delta="+12.4%" icon={<ShoppingBag className="h-3.5 w-3.5" />} />
-        <MetricMini label="AOV" value="$56.5" delta="+4.1%" icon={<TrendingUp className="h-3.5 w-3.5" />} />
-        <MetricMini label="Customers" value="18,210" delta="+9.2%" icon={<Users className="h-3.5 w-3.5" />} />
+        <MetricMini
+          label="Orders"
+          value="50,284"
+          delta="+12.4%"
+          icon={<ShoppingBag className="h-3.5 w-3.5" />}
+        />
+        <MetricMini
+          label="AOV"
+          value="$56.5"
+          delta="+4.1%"
+          icon={<TrendingUp className="h-3.5 w-3.5" />}
+        />
+        <MetricMini
+          label="Customers"
+          value="18,210"
+          delta="+9.2%"
+          icon={<Users className="h-3.5 w-3.5" />}
+        />
       </div>
 
       <div className="rounded-xl bg-white/5 border border-white/10 p-4">
@@ -277,7 +328,17 @@ function DashboardPreview() {
   );
 }
 
-function MetricMini({ label, value, delta, icon }: { label: string; value: string; delta: string; icon: React.ReactNode }) {
+function MetricMini({
+  label,
+  value,
+  delta,
+  icon,
+}: {
+  label: string;
+  value: string;
+  delta: string;
+  icon: React.ReactNode;
+}) {
   return (
     <div className="rounded-xl bg-white/5 border border-white/10 p-3">
       <div className="flex items-center gap-1.5 text-white/50 text-[10px] uppercase tracking-widest">

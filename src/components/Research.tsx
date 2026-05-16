@@ -10,7 +10,9 @@ export function Research() {
           <div className="relative h-32 w-24 rounded-md bg-white border border-border shadow-[var(--shadow-soft)] p-2.5 rotate-[-4deg]">
             <div className="flex items-center gap-1 pb-1.5 border-b border-border">
               <ScrollText className="h-2.5 w-2.5 text-primary" />
-              <span className="text-[6px] uppercase tracking-widest text-muted-foreground">Paper</span>
+              <span className="text-[6px] uppercase tracking-widest text-muted-foreground">
+                Paper
+              </span>
             </div>
             <div className="mt-1.5 space-y-1">
               <div className="h-1 w-full rounded bg-foreground/70" />

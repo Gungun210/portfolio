@@ -11,7 +11,7 @@ export function Contact() {
     const data = new FormData(form);
     const subject = encodeURIComponent(`Portfolio inquiry — ${data.get("name") || ""}`);
     const body = encodeURIComponent(
-      `${data.get("message") || ""}\n\n— ${data.get("name") || ""} (${data.get("email") || ""})`
+      `${data.get("message") || ""}\n\n— ${data.get("name") || ""} (${data.get("email") || ""})`,
     );
     window.location.href = `mailto:khatrigungun225@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
@@ -107,7 +107,12 @@ function ContactRow({
     </div>
   );
   return href ? (
-    <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="block">
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel="noreferrer"
+      className="block"
+    >
       {inner}
     </a>
   ) : (

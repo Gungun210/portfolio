@@ -73,17 +73,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lovable App" },
-      { name: "description", content: "A premium, recruiter-friendly portfolio website for a Data Science student showcasing Data Analytics skills and projects." },
+      {
+        name: "description",
+        content:
+          "A premium, recruiter-friendly portfolio website for a Data Science student showcasing Data Analytics skills and projects.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "A premium, recruiter-friendly portfolio website for a Data Science student showcasing Data Analytics skills and projects." },
+      {
+        property: "og:description",
+        content:
+          "A premium, recruiter-friendly portfolio website for a Data Science student showcasing Data Analytics skills and projects.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "A premium, recruiter-friendly portfolio website for a Data Science student showcasing Data Analytics skills and projects." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a17cfad-4fe9-412c-8dc2-9dcfe76dd18b/id-preview-039878ea--88f45753-eb2e-4dbf-ac03-a28c2ff29d31.lovable.app-1778897624449.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a17cfad-4fe9-412c-8dc2-9dcfe76dd18b/id-preview-039878ea--88f45753-eb2e-4dbf-ac03-a28c2ff29d31.lovable.app-1778897624449.png" },
+      {
+        name: "twitter:description",
+        content:
+          "A premium, recruiter-friendly portfolio website for a Data Science student showcasing Data Analytics skills and projects.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a17cfad-4fe9-412c-8dc2-9dcfe76dd18b/id-preview-039878ea--88f45753-eb2e-4dbf-ac03-a28c2ff29d31.lovable.app-1778897624449.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a17cfad-4fe9-412c-8dc2-9dcfe76dd18b/id-preview-039878ea--88f45753-eb2e-4dbf-ac03-a28c2ff29d31.lovable.app-1778897624449.png",
+      },
     ],
     links: [
       {

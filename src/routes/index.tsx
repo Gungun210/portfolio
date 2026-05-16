@@ -22,8 +22,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Gungun Khatri — Data Analytics Portfolio" },
       {
         property: "og:description",
-        content:
-          "Python · SQL · Power BI · Tableau · EDA. Turning data into decisions.",
+        content: "Python · SQL · Power BI · Tableau · EDA. Turning data into decisions.",
       },
     ],
   }),
