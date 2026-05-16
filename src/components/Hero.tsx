@@ -45,12 +45,14 @@ export function Hero() {
             >
               <Download className="h-4 w-4" /> Download Resume
             </a>
-            <button
-              onClick={() => scrollTo("resume")}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 h-11 px-5 rounded-full border border-border bg-white text-foreground text-sm font-medium hover:bg-secondary hover:border-primary/40 transition"
             >
               <FileText className="h-4 w-4" /> View Resume
-            </button>
+            </a>
             <button
               onClick={() => scrollTo("contact")}
               className="inline-flex items-center gap-2 h-11 px-5 rounded-full text-sm font-medium text-foreground hover:text-primary transition"
